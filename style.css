@@ -1,0 +1,849 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  font-style: italic;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(38, 39, 45);
+  position: relative;
+  min-width: 440px;
+}
+/*------------------------Navigation-----------------*/
+nav {
+  height: 5%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 0%;
+  background-color: black;
+  /* position: fixed; */
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: 4%;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  height: 10%;
+  width: 30%;
+  margin-right: 5%;
+}
+.nav-left img {
+  height: auto;
+  width: 100%;
+  border-radius: 50%;
+  margin: 10%;
+  cursor: pointer;
+}
+.nav-left ul li {
+  display: flex;
+  list-style: none;
+  display: inline-block;
+}
+.nav-child {
+  height: 5%;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+.search-box {
+  background: rgba(40, 38, 38, 0.823);
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+.search-box img {
+  width: 16px;
+  cursor: pointer;
+}
+.search-box input {
+  width: 100%;
+  background: transparent;
+  padding: 4%;
+  outline: none;
+  border: 0;
+}
+.nav-right-child {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-user-icon {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-user-icon img {
+  height: auto;
+  width: 100%;
+  /* padding-right: 4%; */
+}
+.microphone {
+  color: white;
+  padding: 25%;
+  cursor: pointer;
+}
+.notification {
+  color: white;
+  padding: 25%;
+  cursor: pointer;
+}
+
+.profile {
+  color: white;
+  height: auto;
+  width: 5%;
+  /* padding-top: 1%; */
+  padding-right: 2%;
+}
+.profile img {
+  height: auto;
+  width: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.page-name {
+  font-weight: bolder;
+  font-size: 30px;
+  color: white;
+}
+/*------------------------Left-container-----------------*/
+main {
+  height: auto;
+  position: relative;
+}
+.container {
+  height: auto;
+  width: 70%;
+  margin-top: 2%;
+  overflow: hidden;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.Top {
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+}
+.top {
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.top1 {
+  height: auto;
+  width: 49%;
+}
+.top img {
+  height: auto;
+  width: 100%;
+  border-radius: 5px;
+}
+.top1 img:hover {
+  transform: scale(1, 2);
+}
+/*********************************** LATEST RELEASE ********************************/
+.Latest-Release {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2%;
+}
+.latest-release {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.LR {
+  height: auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.lrleft-img img {
+  height: auto;
+  width: 100%;
+}
+.lrright-img img {
+  height: 1rem;
+  width: 1rem;
+}
+.lrleft-img {
+  height: auto;
+  width: 23%;
+}
+.lrright-img {
+  color: white;
+  cursor: pointer;
+}
+.lrleft {
+  display: flex;
+}
+.lrright {
+  padding-right: 13%;
+}
+.lrleftchild {
+  padding-left: 2%;
+  padding-top: 5%;
+}
+
+.dt {
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+}
+
+/*********************************** POPULAR ARTISTS ********************************/
+.Popular-Artists {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  margin-top: 2%;
+}
+.popular-artists {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+}
+.popular img {
+  height: auto;
+  width: 100%;
+  border-radius: 50%;
+}
+.child-popular-artists {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: auto;
+  width: 13%;
+  position: relative;
+}
+.po-name {
+  color: white;
+}
+.play-icon {
+  color: white;
+  position: absolute;
+  top: 41%;
+  left: 45%;
+  display: none;
+  /* transform: -50%;
+  translate: -50%; */
+  padding-bottom: 3%;
+  cursor: pointer;
+}
+.child-popular-artists:hover .play-icon {
+  color: white;
+  display: unset;
+}
+
+/*********************************** MUSIC  ********************************/
+.music {
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: space-between;
+  background: rgb(37, 39, 59);
+  margin-top: 2%;
+  position: relative;
+}
+.music-class1 img {
+  height: auto;
+  width: 100%;
+  border-radius: 50%;
+}
+.music-class1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 13%;
+}
+.music-class2 {
+  /* margin-left: -52%; */
+  color: white;
+  display: none;
+  position: absolute;
+  cursor: pointer;
+}
+.music-class1:hover .music-class2 {
+  font-weight: bolder;
+  color: white;
+  display: unset;
+}
+/*********************************** ENJOY ********************************/
+.enjoy {
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 3%;
+  position: relative;
+}
+.enjoy-class1 img {
+  height: auto;
+  width: 100%;
+}
+.enjoy-class1 {
+  display: flex;
+  height: auto;
+  width: 33%;
+}
+
+.enjoy-class1 img:hover {
+  transform: scale(1.1, 1.2);
+}
+
+/*********************************** LATEST ENGLISH AND LATEST HINDI ********************************/
+.Latest-English {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2%;
+}
+.Latest-Hindi {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2%;
+}
+.Latest-English-Parent,
+.Latest-Hindi-Parent {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.Latest-English-Child,
+.Latest-Hindi-Child {
+  height: auto;
+  width: 11%;
+  display: flex;
+  flex-direction: column;
+}
+.latest-english-img img,
+.latest-hindi-img img {
+  height: auto;
+  width: 100%;
+  cursor: pointer;
+}
+.head-name {
+  font-weight: bolder;
+  color: white;
+}
+
+/*------------------------Right-Queue-----------------*/
+.your-playlist {
+  height: auto;
+  width: 28%;
+  /* background-color: aqua; */
+  position: absolute;
+  top: 0%;
+  right: 1%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-top: -1%;
+  /* overflow: hidden; */
+}
+.playall img {
+  height: 23px;
+  width: 60px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/*------------------------Right-Queue-Playlist----------------*/
+.playlist-child {
+  height: auto;
+  width: 28%;
+  /* background-color: rgb(183, 131, 63); */
+  position: absolute;
+  top: 3.5%;
+  right: 1%;
+}
+.playlist-content-left-img {
+  height: auto;
+  width: 17%;
+}
+.playlist-content-left img {
+  height: auto;
+  width: 100%;
+  cursor: pointer;
+}
+.playlist-content-right {
+  margin-right: 6%;
+  padding-top: 3%;
+}
+.playlist-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -3%;
+  padding-bottom: 5%;
+}
+.playlist-content-left {
+  display: flex;
+}
+
+.song-details {
+  margin-top: 6%;
+  color: white;
+  padding-left: 3%;
+}
+
+.songname {
+  font-weight: bolder;
+  font-size: 13px;
+  color: white;
+}
+.singer {
+  font-size: 10px;
+  color: white;
+}
+.heart {
+  color: white;
+  padding-top: 15%;
+  cursor: pointer;
+}
+.heart i:hover {
+  color: red;
+}
+
+
+/***************************** RESPONSIVE ******************************/
+/************************ Navbar Responsive **************************/
+@media screen and (max-width: 1317px) {
+  .profile {
+    height: auto;
+    width: 5.5%;
+  }
+}
+@media screen and (max-width: 1165px) {
+  .page-name {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 745px) {
+  .nav-left {
+    height: auto;
+    width: 4.5%;
+  }
+}
+@media screen and (max-width: 670px) {
+  .nav-right {
+    margin-right: 7%;
+  }
+}
+@media screen and (max-width: 570px) {
+  .nav-left {
+    height: auto;
+    width: 6%;
+  }
+  .nav-right {
+    margin-right: 9%;
+  }
+  .profile {
+    height: auto;
+    width: 6%;
+  }
+  .page-name {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .profile {
+    height: auto;
+    width: 6.5%;
+  }
+}
+@media screen and (max-width: 488px) {
+  .nav-right {
+    margin-right: 10%;
+  }
+  .profile {
+    height: auto;
+    width: 7%;
+  }
+  .page-name {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .profile {
+    height: auto;
+    width: 7%;
+  }
+  .page-name {
+    font-size: 17px;
+  }
+}
+
+
+/*****************************TOP RESPONSIVE ******************************/
+@media screen and (max-width: 1100px) {
+  .top1 {
+    height: auto;
+    width: 5%;
+  }
+}
+
+/*********************** LATEST RELEASE RESPONSIVE************************/
+@media screen and (max-width: 1100px) {
+  .lrleft-img {
+    height: auto;
+    width: 24%;
+  }
+}
+
+/*********************** POPULAR ARTISTS Respnsive************************/
+@media screen and (max-width: 1320px) {
+  .popularartist7 {
+    display: none;
+  }
+  .child-popular-artists {
+    height: auto;
+    width: 15%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .child-popular-artists {
+    height: auto;
+    width: 16%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .child-popular-artists {
+    height: auto;
+    width: 17%;
+  }
+}
+@media screen and (max-width: 1161px) {
+  .popularartist5 {
+    display: none;
+  }
+  .child-popular-artists {
+    height: auto;
+    width: 19%;
+  }
+}
+@media screen and (max-width: 920px) {
+  .child-popular-artists {
+    height: auto;
+    width: 20%;
+  }
+}
+
+/************************* MUSIC  Responsive********************************/
+
+@media screen and (max-width: 1320px) {
+  .music6 {
+    display: none;
+  }
+  .music-class1 {
+    height: auto;
+    width: 15%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .music-class1 {
+    height: auto;
+    width: 16%;
+  }
+}
+@media screen and (max-width: 1161px) {
+  .music3 {
+    display: none;
+  }
+  .music-class1 {
+    height: auto;
+    width: 19%;
+  }
+}
+
+/************************* ENJOY RESPPONSIVE ***********************/
+@media screen and (max-width: 1300px) {
+  .enjoy2 {
+    display: none;
+  }
+  .enjoy-class1 {
+    height: auto;
+    width: 49%;
+  }
+}
+
+/************************* LATEST ENGLISH AND LATEST HINDI ***********************/
+@media screen and (max-width: 1384px) {
+  .latestenglish8,
+  .latesthindi8 {
+    display: none;
+  }
+  .Latest-English-Child,
+  .Latest-Hindi-Child {
+    height: auto;
+    width: 12%;
+  }
+}
+@media screen and (max-width: 1261px) {
+  .Latest-English-Child,
+  .Latest-Hindi-Child {
+    height: auto;
+    width: 13%;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .latestenglish7,
+  .latesthindi7 {
+    display: none;
+  }
+  .Latest-English-Child,
+  .Latest-Hindi-Child {
+    height: auto;
+    width: 14%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .Latest-English-Child,
+  .Latest-Hindi-Child {
+    height: auto;
+    width: 15%;
+  }
+}
+
+/*************************WRITESIDE QUEUE ***********************/
+
+@media screen and (max-width: 1350px) {
+  .playlist-content-left-img {
+    height: auto;
+    width: 18%;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .playlist-content-left-img {
+    height: auto;
+    width: 19%;
+  }
+}
+@media screen and (max-width: 1189px) {
+  .playlist-content-left-img {
+    height: auto;
+    width: 20%;
+  }
+}
+@media screen and (max-width: 1057px) {
+  .playlist-content-left-img {
+    height: auto;
+    width: 22%;
+  }
+}
+@media screen and (max-width: 940px) {
+  .playlist-content-left-img {
+    height: auto;
+    width: 23%;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .your-playlist,
+  .playlist-child {
+    display: none;
+  }
+
+  .container {
+    height: auto;
+    width: 100%;
+  }
+  .top1 {
+    height: auto;
+    width: 49%;
+  }
+  .lrleft-img {
+    height: auto;
+    width: 25%;
+  }
+  .child-popular-artists {
+    height: auto;
+    width: 19%;
+  }
+  .music-class1 {
+    height: auto;
+    width: 18%;
+  }
+  .enjoy-class1 {
+    height: auto;
+    width: 49%;
+  }
+  .Latest-English-Child,
+  .Latest-Hindi-Child {
+    height: auto;
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .topimg2 {
+    display: none;
+  }
+  .top1 {
+    height: auto;
+    width: 99%;
+  }
+  .lrleft-img {
+    height: auto;
+    width: 27%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .lrleft-img {
+    height: auto;
+    width: 30%;
+  }
+}
+@media screen and (max-width: 590px) {
+  .lrleft-img {
+    height: auto;
+    width: 33%;
+  }
+  .child-popular-artists {
+    height: auto;
+    width: 20%;
+  }
+  .music-class1 {
+    height: auto;
+    width: 19%;
+  }
+  .latestenglish6,
+  .latesthindi6 {
+    display: none;
+  }
+  .Latest-English-Child,
+  .Latest-Hindi-Child {
+    height: auto;
+    width: 16%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .popularartist4 {
+    display: none;
+  }
+  .child-popular-artists {
+    height: auto;
+    width: 23%;
+  }
+  .music2 {
+    display: none;
+  }
+  .music-class1 {
+    height: auto;
+    width: 22%;
+  }
+  .enjoy1 {
+    display: none;
+  }
+  .enjoy-class1 {
+    height: auto;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .lrleft-img {
+    height: auto;
+    width: 35%;
+  }
+  .child-popular-artists {
+    height: auto;
+    width: 24%;
+  }
+  .music-class1 {
+    height: auto;
+    width: 23%;
+  }
+  .Latest-English-Child,
+  .Latest-Hindi-Child {
+    height: auto;
+    width: 17%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .lrleft-img {
+    height: auto;
+    width: 37%;
+  }
+  .popularartist6 {
+    display: none;
+  }
+  .child-popular-artists {
+    height: auto;
+    width: 31%;
+  }
+  .music4 {
+    display: none;
+  }
+  .music-class1 {
+    height: auto;
+    width: 30%;
+  }
+  .latestenglish4,
+  .latesthindi4 {
+    display: none;
+  }
+  .Latest-English-Child,
+  .Latest-Hindi-Child {
+    height: auto;
+    width: 20%;
+  }
+}
+@media screen and (max-width: 440px) {
+  .latest-release {
+    height: auto;
+    width: 100%;
+    display: flex;
+  }
+  .LR {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .lr2,
+  .lr4 {
+    display: none;
+  }
+  .lrleft-img {
+    height: auto;
+    width: 25%;
+  }
+}
+@media screen and (max-width: 354px) {
+  .child-popular-artists {
+    height: auto;
+    width: 32%;
+  }
+  .music-class1 {
+    height: auto;
+    width: 31%;
+  }
+  .Latest-English-Child,
+  .Latest-Hindi-Child {
+    height: auto;
+    width: 21%;
+  }
+}
